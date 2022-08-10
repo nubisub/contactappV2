@@ -8,13 +8,23 @@ app.use(expressLayouts);
 
 app.set("view engine", "ejs");
 
+// built in middleware
+// make public assets available to the app
+app.use(express.static("public"));
+
+
+// middleware
+// app.use((req, res, next) => {
+// 	console.log("Time : " + Date.now());
+// 	next();
+// });
 // Routing
 
 app.get("/", (req, res) => {
 	const data = fs.readFileSync("db.json");
 	res.render("index", {
 		data: JSON.parse(data),
-		title: 'Contact: Home',
+		title: "Contact: Home",
 		layout: "layouts/main-layout",
 	});
 });
@@ -24,7 +34,6 @@ app.get("/about", (req, res) => {
 		layout: "layouts/main-layout",
 		title: "Contact: About",
 	});
-		
 });
 
 app.get("/contact", (req, res) => {
@@ -36,7 +45,10 @@ app.get("/contact", (req, res) => {
 
 app.use("/", (req, res) => {
 	res.status(404);
-	res.send("404 Page");
+	res.render("error", {
+		layout: "layouts/main-layout",
+		title: "Contact: Error",
+	});
 });
 
 app.listen(port, () => {
