@@ -1,17 +1,1 @@
-[
-	{
-		"nama": "marco",
-		"email": "marco@mail.com",
-		"phone": "081234567891"
-	},
-	{
-		"nama": "polo",
-		"email": "polo@mail.com",
-		"phone": "081234567893"
-	},
-	{
-		"nama": "will",
-		"email": "will@mail.com",
-		"phone": "081234567895"
-	}
-]
+[{"nama":"marco","email":"marco@mail.com","phone":"081234567891"},{"nama":"polo1","email":"polo@mail.com","phone":"081234567893"},{"nama":"polo2","email":"polo@mail.com","phone":"081234567893"},{"nama":"polo3","email":"polo@mail.com","phone":"081234567893"}]

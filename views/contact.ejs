@@ -1,2 +1,46 @@
-<h1 class="m-16 my-8">
-this is a CRUD app, made with nodeJS, ExpressJS, database with JSON</h1>
+
+<div class="mx-16 my-12 ">
+    <!-- add Button -->
+    <div class="pb-4 my-2">
+        <a href="/add" class="p-3 px-4 bg-emerald-500 text-white hover:bg-emerald-400  rounded ">Add Contact</a>
+    </div>
+    <!-- Table -->
+    <div class="flex flex-row ">
+        <!-- Nama -->
+        <div class="min-w-[250px] bg-gray-100 flex items-center  border-solid border-2 p-4 py-2">Nama</div>
+        <!-- Email -->
+        <div class="min-w-[250px] bg-gray-100  flex items-center  border-solid border-2 p-4 py-2 border-l-0 ">Email </div>
+        <!-- Phone -->
+        <div class="min-w-[250px] bg-gray-100  flex items-center  border-solid border-2 p-4 py-2 border-l-0 ">Phone Number </div>
+        <!-- Action -->
+        <div class="min-w-[270px]  bg-gray-100 flex items-center  border-solid border-2 p-4 py-2 pl-6 border-l-0">
+            Action
+        </div>
+    </div>
+    <% if ((data.length === 0)||!data) { %>
+        <div class="w-[1020px] flex items-center justify-center  border-solid border-2 p-4 border-t-0">Data Empty</div>
+    <% } else { %>
+        <% data.forEach(element => { %>
+    <div class="flex flex-row">
+        <!-- Nama -->
+        <div class="min-w-[250px] flex items-center  border-solid border-2 p-4 border-t-0"><%= element.nama %> </div>
+        <!-- Email -->
+        <div class="min-w-[250px]  flex items-center   border-solid border-2 p-4 border-l-0 border-t-0" ><%= element.email  %> </div>
+        <!-- Phone -->
+        <div class="min-w-[250px]  flex items-center   border-solid border-2 p-4 border-l-0 border-t-0" ><%= element.phone  %> </div>
+        <!-- Action Button -->
+        <div class="flex p-4 py-2 justify-around items-center min-w-[270px]   border-solid border-2 p-4 border-l-0 border-t-0 ">
+            <!-- Edit Button -->
+            <a href="/contact/edit/<%=element.nama %>"  class="p-2 px-4 bg-cyan-600 text-white rounded hover:bg-cyan-500">Edit</a>
+            <!-- Detail Button -->
+            <a href= "/contact/<%=element.nama %>"  class="p-2 px-4 bg-teal-600 text-white hover:bg-teal-500  rounded ">Detail</a>
+            <!-- Delete Button -->
+            <a href="/contact/delete/<%=element.nama %>" class="p-2 px-4 bg-red-600 text-white hover:bg-red-500  rounded ">Delete</a>
+        </div>
+    </div>
+<% }); %>
+    <% } %> 
+     
+
+
+</div>

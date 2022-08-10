@@ -1,0 +1,21 @@
+<div class="m-12 mx-16">
+    <h1 class="text-3xl font-semibold mb-8">Add New Contact</h1>
+    <form method="post" action="/contact">
+        <div>
+            <label class="block my-2 mt-4" for="nama">Name</label>
+            <input required class=" w-[400px] h-[40px]  p-2 text-base px-4 font-normal text-gray-700 bg-white bg-clip-padding border border-solid border-gray-300 rounded transition ease-in-out m-0 focus:text-gray-700 focus:bg-white focus:border-blue-600 focus:outline-none focus:border-2" type="text" name="nama" id="nama">
+        </div>
+        <div>
+            <label class="block my-2 mt-4" for="email">Email</label>
+            <input required class="w-[400px] h-[40px] p-2 px-4 text-base font-normal text-gray-700 bg-white bg-clip-padding border border-solid border-gray-300 rounded transition ease-in-out m-0 focus:text-gray-700 focus:bg-white focus:border-blue-600 focus:border-2 focus:outline-none" type="email"  name="email" id="email">
+        </div>
+        <div>
+            <label class="block my-2 mt-4" for="phone">Phone Number</label>
+            <input required class="w-[400px] h-[40px] p-2 focus:border-2 px-4 text-base font-normal text-gray-700 bg-white bg-clip-padding border border-solid border-gray-300 rounded transition ease-in-out m-0 focus:text-gray-700 focus:bg-white focus:border-2  focus:border-blue-600 focus:outline-none" type="tel" name="phone" id="phone">
+        </div>
+        <div class="my-8">
+            <button class="p-3 font-semibold px-6 text-white rounded bg-emerald-500 hover:bg-emerald-400" type="submit">Add Contact</button>
+        </div>
+    </form >
+
+</div>
