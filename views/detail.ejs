@@ -1,10 +1,19 @@
-
 <% if (data) { %>
-    <div class="mx-16 my-8 border-solid border-2 p-8">
-<h1 class="font-semibold text-5xl my-4"><%= data.nama %>  </h1>
-<a class="text-2xl my-4 text-sky-600 hover:text-sky-800 hover:underline" href="mailto:<%= data.email %>"><%= data.email %></a>
-<h1 class="text-xl my-4"> <%= data.phone %>  </h1>
-
+    <div class="min-w-[max] bg-[#F3F4F6] py-24 h-[fit] border-solid border-2 p-8 flex justify-center items-center">
+        <div class="border-solid bg-[#FFFFFF] border-2 min-w-[300px] py-2 px-6 h-[400px] drop-shadow-xl rounded-md">
+            <div class="bg-[url('../profile.jpg')] bg-cover shadow-sm bg-center w-[150px] h-[150px] rounded-full mx-auto my-6 "></div>
+            <h1 class="font-semibold text-2xl my-2 mb-6 text-center"><%= data.nama %> </h1>
+            <table >
+                <tr>
+                    <td class="pr-6 pb-2">Email</td>
+                    <td class="pb-2">:  <a class="text-sky-600 hover:text-sky-800 hover:underline" href="mailto:<%= data.email %>">     <%= data.email %></a></td>
+                </tr>
+                <tr>
+                    <td class="pb-2">Phone</td>
+                    <td class="pb-2">:  <%= data.phone %></td>
+                </tr>
+            </table>
+        </div>
     </div>
 
 
